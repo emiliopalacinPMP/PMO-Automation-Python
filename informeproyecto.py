@@ -16,14 +16,8 @@ import matplotlib.patches as patches
 import numpy as np
 import os
 
-# CONFIGURACIÓN DE DIRECTORIOS
-# Esto crea la carpeta 'output' automáticamente al ejecutar el script
 if not os.path.exists('output'):
     os.makedirs('output')
-    print("✅ Carpeta 'output' creada exitosamente.")
-
-# --- 1. CONFIGURACIÓN Y CARGA DE DATOS (ETL) ---
-# Aquí continúa su código original (plt.rcParams, try/except, etc.)
 
 # --- 1. CONFIGURACIÓN Y CARGA DE DATOS (ETL) ---
 # Configuración de estilos globales para matplotlib
