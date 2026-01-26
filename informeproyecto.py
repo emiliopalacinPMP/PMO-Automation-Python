@@ -16,6 +16,17 @@ import matplotlib.patches as patches
 import numpy as np
 import os
 
+# --- COPIE Y PEGUE EL BLOQUE DESDE AQUÍ ---
+# CONFIGURACIÓN DE DIRECTORIOS
+# Esto crea la carpeta 'output' automáticamente al ejecutar el script
+if not os.path.exists('output'):
+    os.makedirs('output')
+    print("✅ Carpeta 'output' creada exitosamente.")
+# --- HASTA AQUÍ ---
+
+# --- 1. CONFIGURACIÓN Y CARGA DE DATOS (ETL) ---
+# Aquí continúa su código original (plt.rcParams, try/except, etc.)
+
 # --- 1. CONFIGURACIÓN Y CARGA DE DATOS (ETL) ---
 # Configuración de estilos globales para matplotlib
 plt.rcParams['font.family'] = 'sans-serif'
