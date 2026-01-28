@@ -311,4 +311,17 @@ ax_foot.text(0.5, 0.5, "Consultor PMO | Project Manager PMP® | BI, Reporting Ej
              color='white', fontsize=11, va='center', ha='center')
 ax_foot.text(0.98, 0.5, "www.linkedin.com/in/emiliopalacin", color='white', fontsize=11, va='center', ha='right')
 
+# --- GUARDAR SALIDAS ---
+# Guardar figura como PNG
+output_png = os.path.join('output', 'Informe_Proyecto_Subestacion.png')
+plt.savefig(output_png, dpi=300, bbox_inches='tight')
+print(f"✅ Imagen guardada en: {output_png}")
+
+# Guardar datos procesados en Excel
+output_excel = os.path.join('output', 'Datos_Procesados.xlsx')
+with pd.ExcelWriter(output_excel, engine='openpyxl') as writer:
+    df.to_excel(writer, sheet_name='Resumen_Fases', index=False)
+    df_hist.to_excel(writer, sheet_name='Histórico_Índices', index=False)
+print(f"✅ Datos guardados en: {output_excel}")
+
 plt.show()
